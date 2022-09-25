@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+    text-shadow: 2px;
+}
+li{
+    padding-top: 10px;
+}
+a {
+    color: #3498db;
+}
+/* 创建2个相等的列 */
+.column {
+    float: left;
+    width: 50%;
+}  
+  /* 列后清除浮动 */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.row {
+    padding: 0em 10em;
+}
