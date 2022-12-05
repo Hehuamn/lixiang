@@ -15,15 +15,25 @@
         </h1>
         <div>
             <form action="/action_page.php">
+                <label for="choose">选择反馈问题：</label><br>
+                <input type="radio" id="choose" name="choose" value="增">增
+                <input type="radio" id="choose" name="choose" value="删">删
+                <input type="radio" id="choose" name="choose" value="改" checked>改<br><br>
                 <label for="title">题目：</label>
                 <input type="text" id="title" name="title"><br><br>
-                <label for="author">作者/来源：</label>
+                <label for="author">作者：</label>
                 <input type="text" id="author" name="author"><br><br>
-                <label for="content">内容：</label>
+                <label for="author">朝代/时间：</label>
+                <input type="text" id="date" name="date"><br><br>
+                <label for="content">正文：</label>
                 <textarea type="text" id="content" name="content" placeholder="请输入正文"></textarea><br><br>
-                <input type="submit" value="Submit">
+                <label for="content">注释：</label>
+                <textarea type="text" id="note" name="note" placeholder="请输入正文"></textarea><br><br>
+                <label for="other">其他：</label>
+                <textarea type="text" id="other" name="other"></textarea><br><br>
+                <input type="submit" value="提交">
               </form>
-            
+            <!-- 12.5 -->
         </div>
         
     </body>
