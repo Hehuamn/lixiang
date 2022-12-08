@@ -1,4 +1,4 @@
 node_modules
 
 # Build artifact
-index.js
+/index.js
