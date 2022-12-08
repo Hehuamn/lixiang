@@ -1,79 +1,83 @@
 h1 {
-    text-align: center;
-    text-shadow: 2px;
+  text-align: center;
+  text-shadow: 2px;
 }
-li{
-    padding-top: 10px;
+li {
+  padding-top: 10px;
 }
 a {
-    color: #3498db;
+  color: #3498db;
 }
 /* 创建2个相等的列 */
-.column {
-    float: left;
-    width: 45%;
-    padding-right: 5%;
-}  
-  /* 列后清除浮动 */
+.section {
+  float: left;
+  width: 45%;
+  padding-right: 5%;
+}
+/* 列后清除浮动 */
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: '';
+  display: table;
+  clear: both;
 }
 .row {
-    padding: 1em 10em;
+  padding: 1em 10em;
 }
 @font-face {
-    font-family: "myfont";
-    src: url("fonts/webfont.woff") format('woff');
+  font-family: 'myfont';
+  src: url('fonts/webfont.woff') format('woff');
 }
 .font {
-    font-family: "myfont";
+  font-family: 'myfont';
 }
-.font1 {
-    font-family: 'Courier New', Courier, monospace;
+.section-title {
+  font-family: 'Courier New', Courier, monospace;
 }
-.main {
-    text-align: center;
-    height: auto;
-    clear: both;
-    background-color: #e1edfa;
-    overflow: hidden;
-    margin-top: 20px;
-    border: 2px solid #c7c4e8;
-    border-radius: 10px;
-    padding-left:30px;
-    padding-right:30px;
+.section-item {
+  text-align: center;
+  height: auto;
+  clear: both;
+  background-color: #e1edfa;
+  overflow: hidden;
+  margin-top: 20px;
+  border: 2px solid #c7c4e8;
+  border-radius: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+ul.section-item {
+  text-align: left;
+  padding-bottom: 10px;
 }
 .poem {
-    text-align: center;
-    height: auto;
-    clear: both;
-    background-color: #c3d5e9;
-    overflow: hidden;
-    margin-top: 20px;
-    border: 2px solid #d3d0f3;
-    border-radius: 10px;
-    padding-left:30px;
-    padding-right:30px;
-    padding-bottom: 30px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  height: auto;
+  clear: both;
+  background-color: #c3d5e9;
+  overflow: hidden;
+  margin-top: 20px;
+  border: 2px solid #d3d0f3;
+  border-radius: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .poem .zhushi {
-    text-align: left;
-    height: auto;
-    clear: both;
-    background-color: #dfdaf3;
-    overflow: hidden;
-    margin-top: 20px;
-    border: 2px solid #d4dff0;
-    border-radius: 10px;
-    padding-left:10px;
-    padding-right:10px;
-    padding-bottom: 30px;
+  text-align: left;
+  height: auto;
+  clear: both;
+  background-color: #dfdaf3;
+  overflow: hidden;
+  margin-top: 20px;
+  border: 2px solid #d4dff0;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 30px;
 }
 .bg {
-    padding-left: 20%;
-    padding-right: 20%; 
-    background-color: #FBF1EA;
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color: #fbf1ea;
 }

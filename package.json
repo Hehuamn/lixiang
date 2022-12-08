@@ -1,0 +1,31 @@
+{
+  "name": "lixiang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --minify --outfile=index.js --target=chrome70,safari14",
+    "dev": "serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://laosb@github.com/Hehuamn/lixiang.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hehuamn/lixiang/issues"
+  },
+  "homepage": "https://github.com/Hehuamn/lixiang#readme",
+  "devDependencies": {
+    "esbuild": "^0.15.18",
+    "eslint": "^8.29.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.6.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "^2.8.0",
+    "serve": "^14.1.2"
+  }
+}
