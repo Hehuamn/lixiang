@@ -13,6 +13,6 @@ export default function HomeWorkSection (data) {
       author,
       content
     })),
-    moreDestination: '/works.html'
+    moreDestination: 'works.html'
   })
 }

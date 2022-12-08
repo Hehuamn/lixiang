@@ -15,6 +15,6 @@ export default function HomeSharingSection (data) {
           .map(({ content, workTitle }) => `${content}——${workTitle}`)
       }
     ],
-    moreDestination: '/sharing.html'
+    moreDestination: 'sharing.html'
   })
 }
