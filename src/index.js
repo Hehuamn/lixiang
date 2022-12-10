@@ -3,6 +3,7 @@ import { initStore } from './lib/datastore'
 import { loadHomeSections } from './pages/home'
 import { loadWorkDetailContent } from './pages/workDetail'
 import { prepareWorkEditForm } from './pages/workEdit'
+import { loadWorkList } from './pages/works'
 
 function load () {
   const params = new URLSearchParams(window.location.search)
@@ -24,6 +25,12 @@ function load () {
   const workEditForm = document.getElementById('js-work-edit-form')
   if (workEditTitle && workEditForm) {
     prepareWorkEditForm(workEditTitle, workEditForm, workId)
+    return
+  }
+
+  const workList = document.getElementById('js-work-list')
+  if (workList) {
+    loadWorkList(workList)
   }
 }
 
