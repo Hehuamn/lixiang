@@ -1,0 +1,11 @@
+{
+  "apexskier.typescript.config.isEnabledForJavascript" : "Inherit from Global Settings",
+  "deno.enable" : false,
+  "deno.lint" : false,
+  "deno.suggest.autoImports" : false,
+  "deno.suggest.completeFunctionCalls" : false,
+  "deno.suggest.imports.autoDiscover" : false,
+  "deno.suggest.names" : false,
+  "deno.suggest.path" : false,
+  "jaydenseric.deno.formatOnSave" : false
+}

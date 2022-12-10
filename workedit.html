@@ -12,13 +12,13 @@
   <body class="bg">
     <h1 id="js-work-edit-title">编辑</h1>
     <div>
-      <form action="#">
+      <form action="#" id="js-work-edit-form">
         <label for="title">题目：</label>
         <input type="text" id="title" name="title" /><br /><br />
         <label for="author">作者：</label>
         <input type="text" id="author" name="author" /><br /><br />
-        <label for="author">朝代/时间：</label>
-        <input type="text" id="date" name="date" /><br /><br />
+        <label for="published-in">朝代/时间：</label>
+        <input type="text" id="published-in" name="published-in" /><br /><br />
         <label for="content">正文：</label>
         <textarea
           type="text"
@@ -27,29 +27,36 @@
           placeholder="请输入正文"
         ></textarea
         ><br /><br />
-        <label for="content">注释：</label>
+        <label for="author-desc">作者介绍：</label>
         <textarea
           type="text"
-          id="note"
-          name="note"
-          placeholder="请输入正文"
+          id="author-desc"
+          name="author-desc"
+          placeholder="请输入作者介绍"
+        ></textarea
+        ><br />
+        <label for="author-desc">注释：</label>
+        <textarea
+          type="text"
+          id="comments"
+          name="comments"
+          placeholder="请输入注释，以空行分割条目"
         ></textarea
         ><br /><br />
-        <label for="other">其他：</label>
-        <textarea type="text" id="other" name="other"></textarea><br /><br />
         <input type="submit" value="提交" />
       </form>
       <!-- 12.5 -->
     </div>
+    <footer style="text-align: center">
+      <address>
+        <p>Posted by: Lotus, 22/9/25</p>
+        <p>
+          Contact information:<a href="mailto:hehuamn@hdu.edu.cn">
+            hehuamn@hdu.edu.cn</a
+          >
+        </p>
+      </address>
+    </footer>
+    <script src="index.js"></script>
   </body>
-  <footer style="text-align: center">
-    <address>
-      <p>Posted by: Lotus, 22/9/25</p>
-      <p>
-        Contact information:<a href="mailto:hehuamn@hdu.edu.cn">
-          hehuamn@hdu.edu.cn</a
-        >
-      </p>
-    </address>
-  </footer>
 </html>

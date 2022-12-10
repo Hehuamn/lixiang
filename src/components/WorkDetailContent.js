@@ -19,7 +19,7 @@ export default function WorkDetailContent (data) {
   authorLine.textContent = data.author
   authorLine.style = 'color: #4e0894e3;'
 
-  const contentElements = data.content.map((c) => {
+  const contentElements = (data.content ?? []).map((c) => {
     const el = document.createElement('p')
     el.textContent = c
     return el
@@ -38,7 +38,7 @@ export default function WorkDetailContent (data) {
   commentTitle.textContent = '注：'
 
   const commentContainer = document.createElement('ol')
-  const comments = data.comments.map((c) => {
+  const comments = (data.comments ?? []).map((c) => {
     const el = document.createElement('li')
     const pre = document.createElement('pre')
     pre.textContent = c
