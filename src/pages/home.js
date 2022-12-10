@@ -1,13 +1,14 @@
 import HomeWorkSection from '../components/HomeWorkSection'
 import HomeSharingSection from '../components/HomeSharingSection'
 
+import { fetchAllWorks, fetchAllSharing } from '../lib/datastore'
+
 /**
  * @param {HTMLElement} mountPoint
- * @param {{ works: [import('../content/works').Work], sharing: [import('../content/sharing').Sharing] }} data
  */
-export function loadHomeSections (mountPoint, data) {
-  const workSection = HomeWorkSection(data.works)
-  const sharingSection = HomeSharingSection(data.sharing)
+export function loadHomeSections (mountPoint) {
+  const workSection = HomeWorkSection(fetchAllWorks())
+  const sharingSection = HomeSharingSection(fetchAllSharing())
 
   mountPoint.replaceChildren(workSection, sharingSection)
 }

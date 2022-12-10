@@ -1,48 +1,55 @@
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <!-- <meta name="description" content="个人简历"> -->
-        <meta name="keywords" content="文字,诗词">
-        <meta name="author" content="Mengni He">
-        <title>错误反馈</title>
-        <link rel="icon" href="mo.ico" type="image/x-icon">
-        <link rel="stylesheet" href="style.css">
-    </head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <!-- <meta name="description" content="个人简历"> -->
+    <meta name="keywords" content="文字,诗词" />
+    <meta name="author" content="Mengni He" />
+    <title>错误反馈</title>
+    <link rel="icon" href="mo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <body class="bg">
-        <h1>
-            错误反馈
-        </h1>
-        <div>
-            <form action="/action_page.php">
-                <label for="choose">选择反馈问题：</label><br>
-                <input type="radio" id="choose" name="choose" value="增">增
-                <input type="radio" id="choose" name="choose" value="删">删
-                <input type="radio" id="choose" name="choose" value="改" checked>改<br><br>
-                <label for="title">题目：</label>
-                <input type="text" id="title" name="title"><br><br>
-                <label for="author">作者：</label>
-                <input type="text" id="author" name="author"><br><br>
-                <label for="author">朝代/时间：</label>
-                <input type="text" id="date" name="date"><br><br>
-                <label for="content">正文：</label>
-                <textarea type="text" id="content" name="content" placeholder="请输入正文"></textarea><br><br>
-                <label for="content">注释：</label>
-                <textarea type="text" id="note" name="note" placeholder="请输入正文"></textarea><br><br>
-                <label for="other">其他：</label>
-                <textarea type="text" id="other" name="other"></textarea><br><br>
-                <input type="submit" value="提交">
-              </form>
-            <!-- 12.5 -->
-        </div>
-        
-    </body>
-    <footer style="text-align: center;">
-        <address>
-            <p>Posted by: Lotus, 22/9/25</p>
-            <p>Contact information:<a href="mailto:hehuamn@hdu.edu.cn">
-            hehuamn@hdu.edu.cn</a></p>
-        </address>
-    </footer>
-
+  <body class="bg">
+    <h1 id="js-work-edit-title">编辑</h1>
+    <div>
+      <form action="#">
+        <label for="title">题目：</label>
+        <input type="text" id="title" name="title" /><br /><br />
+        <label for="author">作者：</label>
+        <input type="text" id="author" name="author" /><br /><br />
+        <label for="author">朝代/时间：</label>
+        <input type="text" id="date" name="date" /><br /><br />
+        <label for="content">正文：</label>
+        <textarea
+          type="text"
+          id="content"
+          name="content"
+          placeholder="请输入正文"
+        ></textarea
+        ><br /><br />
+        <label for="content">注释：</label>
+        <textarea
+          type="text"
+          id="note"
+          name="note"
+          placeholder="请输入正文"
+        ></textarea
+        ><br /><br />
+        <label for="other">其他：</label>
+        <textarea type="text" id="other" name="other"></textarea><br /><br />
+        <input type="submit" value="提交" />
+      </form>
+      <!-- 12.5 -->
+    </div>
+  </body>
+  <footer style="text-align: center">
+    <address>
+      <p>Posted by: Lotus, 22/9/25</p>
+      <p>
+        Contact information:<a href="mailto:hehuamn@hdu.edu.cn">
+          hehuamn@hdu.edu.cn</a
+        >
+      </p>
+    </address>
+  </footer>
 </html>

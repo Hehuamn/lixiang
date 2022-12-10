@@ -1,7 +1,7 @@
 /** @typedef {{ content: string, workTitle: string, workId: string }} Sharing
 
 /** @type {[Sharing]} */
-export default [
+const sharingData = [
   {
     content:
       '故其妙处，透彻玲珑，不可凑泊，如空中之音，相中之色，水中之月，镜中之象，言有尽而意无穷。',
@@ -29,3 +29,5 @@ export default [
     workId: 's5'
   }
 ]
+
+export default sharingData
