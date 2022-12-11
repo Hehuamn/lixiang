@@ -73,3 +73,10 @@ export function createSharing (newSharing) {
   allSharing.push(newSharing)
   window.localStorage.setItem('sharing', JSON.stringify(allSharing))
 }
+
+/** @param {string} id */
+export function removeSharingById (id) {
+  const allSharing = fetchAllSharing()
+  const newSharing = allSharing.filter((sharing) => sharing.id !== id)
+  window.localStorage.setItem('sharing', JSON.stringify(newSharing))
+}

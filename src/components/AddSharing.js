@@ -12,6 +12,7 @@ export default function AddSharing (onAddSharing) {
     const formData = new window.FormData(form)
     /** @type {import('../content/sharing').Sharing} */
     const newSharing = {
+      id: Math.random().toString(36).split('.')[1],
       content: formData.get('content'),
       workTitle: formData.get('work-title'),
       workId: formData.get('work-id')
