@@ -49,6 +49,13 @@ export function updateWorkById (id, fieldsToUpdate) {
   window.localStorage.setItem('works', JSON.stringify(newWorks))
 }
 
+/** @param {string} id */
+export function removeWorkById (id) {
+  const allWorks = fetchAllWorks()
+  const newWorks = allWorks.filter((work) => work.id !== id)
+  window.localStorage.setItem('works', JSON.stringify(newWorks))
+}
+
 /**
  * @param {Work} newWork
  */
