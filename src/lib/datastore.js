@@ -1,9 +1,11 @@
 import works from '../content/works'
 import sharingData from '../content/sharing'
+import users from '../content/users'
 
 /**
  * @typedef {import('../content/works').Work} Work
  * @typedef {import('../content/sharing').Sharing} Sharing
+ * @typedef {import('../content/users').User} User
  */
 
 export function initStore () {
@@ -12,6 +14,9 @@ export function initStore () {
   }
   if (!window.localStorage.getItem('sharing')) {
     window.localStorage.setItem('sharing', JSON.stringify(sharingData))
+  }
+  if (!window.localStorage.getItem('users')) {
+    window.localStorage.setItem('users', JSON.stringify(users))
   }
 }
 
@@ -23,6 +28,11 @@ export function fetchAllWorks () {
 /** @returns {[Sharing]} */
 export function fetchAllSharing () {
   return JSON.parse(window.localStorage.getItem('sharing'))
+}
+
+/** @returns {[User]} */
+export function fetchAllUsers () {
+  return JSON.parse(window.localStorage.getItem('users'))
 }
 
 /**
@@ -79,4 +89,27 @@ export function removeSharingById (id) {
   const allSharing = fetchAllSharing()
   const newSharing = allSharing.filter((sharing) => sharing.id !== id)
   window.localStorage.setItem('sharing', JSON.stringify(newSharing))
+}
+
+/** @returns {boolean} */
+export function isLoggedIn () {
+  return window.localStorage.getItem('loggedIn') === 'true'
+}
+
+/**
+ * @param {string} username
+ * @param {string} password
+ * @returns {boolean}
+ */
+export function login (username, password) {
+  const users = fetchAllUsers()
+  const result = !!users.find(
+    (u) => u.username === username && u.password === password
+  )
+  window.localStorage.setItem('loggedIn', result.toString())
+  return result
+}
+
+export function logout () {
+  window.localStorage.setItem('loggedIn', 'false')
 }

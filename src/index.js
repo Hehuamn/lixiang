@@ -5,6 +5,7 @@ import { loadWorkDetailContent } from './pages/workDetail'
 import { prepareWorkEditForm } from './pages/workEdit'
 import { loadWorkList } from './pages/works'
 import { loadSharingList } from './pages/sharing'
+import { loadLoginForm } from './pages/login'
 
 function load () {
   const params = new URLSearchParams(window.location.search)
@@ -38,6 +39,12 @@ function load () {
   const sharingList = document.getElementById('js-sharing-list')
   if (sharingList) {
     loadSharingList(sharingList)
+    return
+  }
+
+  const loginForm = document.getElementById('js-login-form')
+  if (loginForm) {
+    loadLoginForm(loginForm)
   }
 }
 
