@@ -4,6 +4,7 @@ import { loadHomeSections } from './pages/home'
 import { loadWorkDetailContent } from './pages/workDetail'
 import { prepareWorkEditForm } from './pages/workEdit'
 import { loadWorkList } from './pages/works'
+import { loadSharingList } from './pages/sharing'
 
 function load () {
   const params = new URLSearchParams(window.location.search)
@@ -31,6 +32,12 @@ function load () {
   const workList = document.getElementById('js-work-list')
   if (workList) {
     loadWorkList(workList)
+    return
+  }
+
+  const sharingList = document.getElementById('js-sharing-list')
+  if (sharingList) {
+    loadSharingList(sharingList)
   }
 }
 

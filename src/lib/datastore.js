@@ -57,3 +57,12 @@ export function createWork (newWork) {
   allWorks.push(newWork)
   window.localStorage.setItem('works', JSON.stringify(allWorks))
 }
+
+/**
+ * @param {Sharing} newSharing
+ */
+export function createSharing (newSharing) {
+  const allSharing = fetchAllSharing()
+  allSharing.push(newSharing)
+  window.localStorage.setItem('sharing', JSON.stringify(allSharing))
+}
