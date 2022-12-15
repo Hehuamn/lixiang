@@ -41,7 +41,13 @@ export default function LoginForm (onLogInStateChange) {
     loginButton.type = 'submit'
     loginButton.value = '登录'
 
-    form.append(usernameInput, passwordInput, loginErrorP, loginButton)
+    form.append(
+      usernameInput,
+      document.createElement('br'),
+      passwordInput,
+      loginErrorP,
+      loginButton
+    )
     form.addEventListener('submit', (e) => {
       e.preventDefault()
 

@@ -81,3 +81,58 @@ ul.section-item {
   padding-right: 20%;
   background-color: #fbf1ea;
 }
+
+input[type='text'],
+input[type='password'],
+textarea {
+  outline: 0px;
+  appearance: none;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-color: rgb(209, 213, 219);
+  border-radius: 0.375rem;
+  border-width: 1px;
+  border-style: solid;
+  width: 100%;
+  display: block;
+  background-color: #fff;
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  box-sizing: border-box;
+}
+textarea {
+  min-height: 10em;
+}
+input[type='text']:focus,
+input[type='password']:focus,
+textarea:focus {
+  box-shadow: 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+label {
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+input[type='submit'] {
+  appearance: none;
+  border: none;
+  width: 100%;
+  display: block;
+  background-color: #c7c4e8;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 0.375rem;
+  font: inherit;
+  font-family: sans-serif;
+  font-weight: bold;
+}
