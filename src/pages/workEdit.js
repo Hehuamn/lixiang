@@ -18,6 +18,7 @@ export function prepareWorkEditForm (titleEl, formEl, workId) {
 
     if (!isLoggedIn()) {
       window.alert('尚未登录。登录后方可编辑/新增。')
+      window.location.href = 'login.html'
       return
     }
 
