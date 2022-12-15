@@ -1,3 +1,5 @@
+import { isLoggedIn } from '../lib/datastore'
+
 /**
  * @param {[import('../content/sharing').Sharing]} data
  * @param {(string) => void} onSharingRemoval
@@ -12,16 +14,19 @@ export default function SharingList (data, onSharingRemoval) {
     const link = document.createElement('a')
     link.href = `workdetail.html?id=${sharing.workId}`
     link.textContent = sharing.workTitle
+    li.append(link)
 
-    const removeButton = document.createElement('button')
-    removeButton.textContent = '刪除'
-    removeButton.addEventListener('click', (e) => {
-      if (window.confirm(`要刪除吗？\n${sharing.content}`)) {
-        onSharingRemoval(sharing.id)
-      }
-    })
+    if (isLoggedIn()) {
+      const removeButton = document.createElement('button')
+      removeButton.textContent = '刪除'
+      removeButton.addEventListener('click', (e) => {
+        if (window.confirm(`要刪除吗？\n${sharing.content}`)) {
+          onSharingRemoval(sharing.id)
+        }
+      })
+      li.append(removeButton)
+    }
 
-    li.append(link, removeButton)
     return li
   })
   ul.append(...items)

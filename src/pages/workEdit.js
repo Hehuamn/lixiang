@@ -1,4 +1,9 @@
-import { fetchWorkById, updateWorkById, createWork } from '../lib/datastore'
+import {
+  fetchWorkById,
+  updateWorkById,
+  createWork,
+  isLoggedIn
+} from '../lib/datastore'
 
 /**
  * @param {HTMLHeadingElement} titleEl
@@ -10,6 +15,12 @@ export function prepareWorkEditForm (titleEl, formEl, workId) {
 
   const handleFormSubmission = (e) => {
     e.preventDefault()
+
+    if (!isLoggedIn()) {
+      window.alert('尚未登录。登录后方可编辑/新增。')
+      return
+    }
+
     const formData = new window.FormData(formEl)
     /** @type {import('../content/works').Work} */
     const newWorkData = {
