@@ -10,18 +10,17 @@ a {
 }
 /* 创建2个相等的列 */
 .section {
-  float: left;
-  width: 45%;
-  padding-right: 5%;
-}
-/* 列后清除浮动 */
-.row:after {
-  content: '';
-  display: table;
-  clear: both;
+  width: 100%;
 }
 .row {
-  padding: 1em 10em;
+  padding: 1em 1em;
+}
+@media (min-width: 700px) {
+  .row {
+    display: flex;
+    gap: 2em;
+    padding: 1em 10em;
+  }
 }
 @font-face {
   font-family: 'myfont';
@@ -76,9 +75,16 @@ ul.section-item {
   padding-right: 10px;
   padding-bottom: 30px;
 }
+
+@media (min-width: 700px) {
+  .bg {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
 .bg {
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 1em;
+  padding-right: 1em;
   background-color: #fbf1ea;
 }
 
