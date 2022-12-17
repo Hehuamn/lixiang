@@ -38,6 +38,10 @@ export default function AddSharing (onAddSharing) {
   workId.name = 'work-id'
   workId.placeholder = '关联作品ID'
 
+  const metadataContainer = document.createElement('div')
+  metadataContainer.style = 'display: flex; gap: 1em; padding-bottom: 1em;'
+  metadataContainer.append(workTitle, workId)
+
   const submitButton = document.createElement('input')
   submitButton.type = 'submit'
   submitButton.value = '提交'
@@ -45,8 +49,7 @@ export default function AddSharing (onAddSharing) {
   form.append(
     textarea,
     document.createElement('br'),
-    workTitle,
-    workId,
+    metadataContainer,
     submitButton
   )
 
