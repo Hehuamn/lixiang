@@ -26,12 +26,14 @@ export default function LoginForm (onLogInStateChange) {
     usernameInput.type = 'text'
     usernameInput.id = 'username'
     usernameInput.name = 'username'
+    usernameInput.value = 'test'
     usernameInput.placeholder = '用户名'
 
     const passwordInput = document.createElement('input')
     passwordInput.type = 'password'
     passwordInput.id = 'password'
     passwordInput.name = 'password'
+    passwordInput.value = 'test123'
     passwordInput.placeholder = '密码'
 
     const loginErrorP = document.createElement('p')
