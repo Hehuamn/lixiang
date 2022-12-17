@@ -126,7 +126,8 @@ input[type='submit'] {
   border: none;
   width: 100%;
   display: block;
-  background-color: #c7c4e8;
+  background-color: #5b4ee4;
+  color: #fff;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.75rem;
