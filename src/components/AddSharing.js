@@ -6,6 +6,7 @@ import { createSharing } from '../lib/datastore'
  */
 export default function AddSharing (onAddSharing) {
   const form = document.createElement('form')
+  form.style = 'margin-top: 3em;'
   form.action = '#'
   form.addEventListener('submit', (e) => {
     e.preventDefault()

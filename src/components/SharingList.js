@@ -9,12 +9,22 @@ export default function SharingList (data, onSharingRemoval) {
   const ul = document.createElement('ul')
   const items = data.map((sharing) => {
     const li = document.createElement('li')
-    li.textContent = `${sharing.content}——`
+    li.style = 'color: rgba(0, 0, 0, 0.5);'
+
+    const p = document.createElement('p')
+    p.textContent = `${sharing.content}`
+    p.style = 'color: black;'
+
+    const dash = document.createElement('span')
+    dash.style = 'margin-left: 1em; color: rgba(0, 0, 0, 0.5);'
+    dash.textContent = '——'
 
     const link = document.createElement('a')
     link.href = `workdetail.html?id=${sharing.workId}`
     link.textContent = sharing.workTitle
-    li.append(link)
+    p.append(dash, link)
+
+    li.append(p)
 
     if (isLoggedIn()) {
       const removeButton = document.createElement('button')
