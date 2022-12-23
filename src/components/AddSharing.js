@@ -39,7 +39,7 @@ export default function AddSharing (onAddSharing) {
   workId.type = 'text'
   workId.id = 'work-id'
   workId.name = 'work-id'
-  workTitle.value = 'yd'
+  workId.value = 'yd'
   workId.placeholder = '关联作品ID'
 
   const metadataContainer = document.createElement('div')
