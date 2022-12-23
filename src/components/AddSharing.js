@@ -25,18 +25,21 @@ export default function AddSharing (onAddSharing) {
   const textarea = document.createElement('textarea')
   textarea.id = 'content'
   textarea.name = 'content'
+  textarea.value = '我有一言，请诸位静听。'
   textarea.placeholder = '分享风雅'
 
   const workTitle = document.createElement('input')
   workTitle.type = 'text'
   workTitle.id = 'work-title'
   workTitle.name = 'work-title'
+  workTitle.value = '诸葛孔明'
   workTitle.placeholder = '出处'
 
   const workId = document.createElement('input')
   workId.type = 'text'
   workId.id = 'work-id'
   workId.name = 'work-id'
+  workTitle.value = 'yd'
   workId.placeholder = '关联作品ID'
 
   const metadataContainer = document.createElement('div')
