@@ -9,6 +9,7 @@ import SectionItem from './SectionItem'
 export default function Section (data) {
   const container = document.createElement('section')
   container.classList.add('section')
+  container.classList.add('fade-in')
 
   const title = document.createElement('h2')
   title.classList.add('section-title')
